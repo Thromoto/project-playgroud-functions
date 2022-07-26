@@ -18,19 +18,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-
-function concatName(ultimaPalav, primeiraPalav) {
-  for (let index = 0; index < array.length; index += 1) {
-    if (index === (array.length - 1)) {
-      ultimaPalav = array[index];
-    }
-  }
-  return ultimaPalav;
+function concatName(array) {
+  let ultimaPalavra = array[array.length - 1];
+  let primeiraPalavra = array[0];
+  return ultimaPalavra + ", " + primeiraPalavra;
 }
-
-console.log(concatName['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -52,7 +44,6 @@ function highestCount(maiorNum) {
 }
 
 // Desafio 7
-
 function catAndMouse(mouse, cat1, cat2) {
   let fugir = 'os gatos trombam e o rato foge';
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
@@ -65,8 +56,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(listaNumeros) {
+let resposta = [];
+
+for (let number in listaNumeros)
+  if (listaNumeros % 3 === 0){
+    resposta.push('fizz');
+  } else if (listaNumeros % 5 === 0){
+    resposta.push('buzz');
+  } else if (listaNumeros % 3 === 0 && listaNumeros % 5 === 0){
+    resposta.push('fizzbuzz');
+  } else {
+    resposta.push('bug!');
+  }
+  return resposta;
+
 }
 
 // Desafio 9
