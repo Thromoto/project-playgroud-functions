@@ -45,6 +45,8 @@ function highestCount(array) {
   }
   return total;
 }
+//Veja que neste caso a diferença é que você utiliza o array na primeira posição e logo após você verifica nas condicionais qual o maior valor e armazena na variável maiorNUm.
+//Em seguida é necessário contar quantas vezes este maior valor se repete, para isso você cria uma nova variável e verifica se a posição do array é igual ao maior valor e contabiliza.
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -59,13 +61,26 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(listaNumeros) {
+  let resposta = [];
+  for (let numero in listaNumeros) {
+    if (listaNumeros[numero] % 3 === 0 && listaNumeros[numero] % 5 !== 0) {
+      resposta.push('fizz');
+    } else if (listaNumeros[numero] % 5 === 0 && listaNumeros[numero] % 3 !== 0) {
+      resposta.push('buzz');
+    } else if (listaNumeros[numero] % 3 === 0 && listaNumeros[numero] % 5 === 0){
+      resposta.push('fizzBuzz');
+    }else{
+      resposta.push('bug!');
+    }
+  }
+  return resposta;
 
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(change) {
+  return encode(change).replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5);
 }
 function decode() {
   // seu código aqui
