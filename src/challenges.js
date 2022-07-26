@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(animal1, animal2) {
-  if ( animal1 === true && animal2 === true){
+  if (animal1 === true && animal2 === true) {
     return true;
   } else {
     return false;
@@ -20,25 +20,49 @@ function splitSentence(string) {
 // Desafio 4
 
 let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-function concatName() {
 
+function concatName(ultimaPalav, primeiraPalav) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === (array.length - 1)) {
+      ultimaPalav = array[index];
+    }
+  }
+  return ultimaPalav;
 }
 
-// Desafio 5
+console.log(concatName['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
+// Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+let num = [9, 1, 2, 3, 9, 5, 7];
+let maiorNum = [];
+
+function highestCount(maiorNum) {
+  for (let index = 0; index < num.length; index += 1) {
+    if (num[index] > maiorNum) {
+      maiorNum = num[index];
+    }
+  }
+  return maiorNum;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+function catAndMouse(mouse, cat1, cat2) {
+  let fugir = 'os gatos trombam e o rato foge';
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+    fugir = 'cat1';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+    fugir = 'cat2';
+  }
+  return fugir;
 }
+
 
 // Desafio 8
 function fizzBuzz() {
