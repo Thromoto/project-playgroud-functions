@@ -68,9 +68,9 @@ function fizzBuzz(listaNumeros) {
       resposta.push('fizz');
     } else if (listaNumeros[numero] % 5 === 0 && listaNumeros[numero] % 3 !== 0) {
       resposta.push('buzz');
-    } else if (listaNumeros[numero] % 3 === 0 && listaNumeros[numero] % 5 === 0){
+    } else if (listaNumeros[numero] % 3 === 0 && listaNumeros[numero] % 5 === 0) {
       resposta.push('fizzBuzz');
-    }else{
+    } else {
       resposta.push('bug!');
     }
   }
@@ -79,11 +79,44 @@ function fizzBuzz(listaNumeros) {
 }
 
 // Desafio 9
-function encode(change) {
-  return encode(change).replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5);
+function encode(frase) {
+  let novaFrase = [];
+  for (let index = 0; index < frase.length; index += 1){
+    if (frase[index] === 'a'){
+      novaFrase.push('1');
+    } else if (frase[index] === 'e') {
+      novaFrase.push('2');
+    } else if (frase[index] === 'i') {
+      novaFrase.push('3');
+    } else if (frase[index] === 'o') {
+      novaFrase.push('4');
+    } else if (frase[index] === 'u') {
+      novaFrase.push('5');
+    } else {
+      novaFrase.push(frase[index]);
+    }
+  }
+  return novaFrase.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let novaFrase = [];
+  for (let index = 0; index < frase.length; index += 1){
+    if (frase[index] === '1'){
+      novaFrase.push('a');
+    } else if (frase[index] === '2') {
+      novaFrase.push('e');
+    } else if (frase[index] === '3') {
+      novaFrase.push('i');
+    } else if (frase[index] === '4') {
+      novaFrase.push('o');
+    } else if (frase[index] === '5') {
+      novaFrase.push('u');
+    } else {
+      novaFrase.push(frase[index]);
+    }
+  }
+  return novaFrase.join('');
 }
 
 // Desafio 10
